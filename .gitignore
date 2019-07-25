@@ -1,0 +1,10 @@
+# Environment variables file
+.env
+
+# Visual Studio Code
+.vscode
+
+# Database
+*.db
+
+/assets/*.csv
