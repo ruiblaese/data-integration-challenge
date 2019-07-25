@@ -20,7 +20,7 @@ func main() {
 		processFirstData = true
 	}
 
-	xormEngine, err := db.StartDatabase()
+	xormEngine, err := db.StartDatabase("challenge.db")
 	if err != nil {
 		log.Fatalln("Error in StartDatabase->", err)
 	}

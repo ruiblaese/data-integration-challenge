@@ -78,12 +78,12 @@ func performRequestFile(r http.Handler, method, path, filePath string,
 
 func TestStartDatabase(t *testing.T) {
 
-	fileDB := "./challenge.db"
+	fileDB := "./challengeTest.db"
 	if _, err := os.Stat(fileDB); !os.IsNotExist(err) {
 		os.Remove(fileDB)
 	}
 
-	xorm, err := db.StartDatabase()
+	xorm, err := db.StartDatabase("./challengeTest.db")
 	assert.NoError(t, err)
 
 	xormEngine = xorm

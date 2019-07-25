@@ -5,6 +5,6 @@
 .vscode
 
 # Database
-challenge.db
+*.db
 
 /assets/*.csv

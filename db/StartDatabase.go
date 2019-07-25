@@ -8,9 +8,9 @@ import (
 )
 
 //StartDatabase inicia banco de dados -> verifica se existe, se nao existe cria
-func StartDatabase() (*xorm.Engine, error) {
+func StartDatabase(dataBaseName string) (*xorm.Engine, error) {
 
-	engine, err := xorm.NewEngine("sqlite3", "./challenge.db")
+	engine, err := xorm.NewEngine("sqlite3", "./"+dataBaseName)
 
 	engine.ShowSQL(false)
 	engine.ShowExecTime(false)
